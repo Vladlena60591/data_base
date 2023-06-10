@@ -1,0 +1,25 @@
+.header{
+    margin: 0 auto 20px auto;
+    padding-top: 20px;
+}
+.log-in{
+    position: absolute;
+    top: 43%;
+    left: 43%;
+}
+.bgLogin{
+    position: absolute;
+    background: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+}
+
+#cansel{
+    position: absolute;
+    right: 0;
+}
+
+.message{
+    max-width: 20vw;
+    margin-top: 10px;
+}

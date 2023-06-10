@@ -1,0 +1,19 @@
+
+.Add {
+    color: white;
+}
+
+.bgAdd {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#canselAdd {
+
+}
+tr:hover{
+    background: rgba(0,0,0,0.1);
+}
