@@ -22,7 +22,9 @@
         <input type="submit" name="edit" value="Сохранить изминения">
     </form>
     <? if (isset($user['is_admin']) && $user['is_admin']): ?>
-        <a href="/cart/listOrder">Просмотреть заказы</a>
+        <p><a href="/cart/listOrder">Просмотреть заказы</a></p>
+        <p><a href="/admin/add">Добавить шоколад</a></p>
+
     <? endif; ?>
 </div>
 

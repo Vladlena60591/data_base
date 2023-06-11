@@ -13,7 +13,7 @@
 <body>
 <div class="container header">
     <div class="row text-center">
-        <div class="col-xs-12 col-sm-2 "><a href="/">Logo</a></div>
+        <div class="col-xs-12 col-sm-2 "><a href="/">Главная</a></div>
         <div class="col-xs-12 col-sm-2 ">ChocoPastry</div>
 
         <div class="col-xs-12 col-sm-8 ">

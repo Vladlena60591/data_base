@@ -69,10 +69,32 @@ class Product
             $products[$i]['id'] = $row['id'];
             $products[$i]['name'] = $row['name'];
             $products[$i]['category_id'] = $row['category_id'];
+            $products[$i]['image'] = $row['image'];
             $products[$i]['price'] = $row['price'];
             $products[$i]['brand'] = $row['brand'];
             $i++;
         }
         return $products;
+    }
+
+    public static function createProduct($name, $category, $price, $availability, $brand, $image ,$description)
+    {
+
+        $db = Db::getConnection();
+        $sql = 'INSERT INTO product'
+            . ' (id,name,category_id,price,availability,brand, image,description)'
+            . ' VALUES (NULL, :name, :category, :price, :availability, :brand, :image_url,:description)'
+            . ' ';
+        $result = $db->prepare($sql);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':category', $category, PDO::PARAM_INT);
+        $result->bindParam(':price', $price, PDO::PARAM_INT);
+        $result->bindParam(':availability', $availability, PDO::PARAM_INT);
+        $result->bindParam(':brand', $brand, PDO::PARAM_STR);
+        $result->bindParam(':image_url', $image, PDO::PARAM_STR);
+        $result->bindParam(':description', $description, PDO::PARAM_STR);
+        return $result->execute();
+
+
     }
 }
